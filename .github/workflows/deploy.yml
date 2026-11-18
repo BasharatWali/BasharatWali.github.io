@@ -1,0 +1,46 @@
+name: Build and deploy portfolio
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 */6 * * *"      # every 6 hours: picks up new/changed repos
+  workflow_dispatch:            # "Run workflow" button in the Actions tab
+  repository_dispatch:
+    types: [repo-updated]       # optional instant trigger (see README)
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build data/projects.json from public repos
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/build_projects.py || echo "::warning::Build failed, deploying the committed snapshot"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

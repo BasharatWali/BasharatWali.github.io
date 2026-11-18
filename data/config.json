@@ -1,0 +1,26 @@
+{
+  "github_user": "BasharatWali",
+  "exclude": [],
+  "hide_topic": "hide-from-portfolio",
+  "hide_archived": true,
+  "new_badge_days": 45,
+  "default_category": "Machine Learning",
+  "categories": [
+    {
+      "name": "LLMs & NLP",
+      "keywords": ["llm", "llms", "nlp", "bert", "gpt", "llama", "codellama", "transformer", "transformers", "rag", "chatbot", "language model", "text", "embeddings", "recommendation", "fine tuning", "finetuning", "qlora", "lora"]
+    },
+    {
+      "name": "Medical Imaging",
+      "keywords": ["medical", "mri", "x ray", "xray", "cxr", "radiology", "ct", "neuroimaging", "tumor", "tumour", "tb", "tuberculosis", "clinical", "disease", "brain", "healthcare"]
+    },
+    {
+      "name": "Remote Sensing",
+      "keywords": ["remote sensing", "satellite", "sentinel", "sentinel 2", "landsat", "crop", "land cover", "gis", "geospatial", "earth engine"]
+    },
+    {
+      "name": "Computer Vision",
+      "keywords": ["computer vision", "vision", "image", "images", "segmentation", "detection", "cnn", "unet", "yolo", "gan", "point cloud", "anomaly"]
+    }
+  ]
+}

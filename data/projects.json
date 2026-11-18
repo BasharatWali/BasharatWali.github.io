@@ -1,0 +1,236 @@
+{
+  "generated_at": "2026-11-18T12:34:23Z",
+  "user": "BasharatWali",
+  "rules": {
+    "exclude": [],
+    "hide_topic": "hide-from-portfolio",
+    "hide_archived": true,
+    "new_badge_days": 45,
+    "categories": [
+      {
+        "name": "LLMs & NLP",
+        "keywords": [
+          "llm",
+          "llms",
+          "nlp",
+          "bert",
+          "gpt",
+          "llama",
+          "codellama",
+          "transformer",
+          "transformers",
+          "rag",
+          "chatbot",
+          "language model",
+          "text",
+          "embeddings",
+          "recommendation",
+          "fine tuning",
+          "finetuning",
+          "qlora",
+          "lora"
+        ]
+      },
+      {
+        "name": "Medical Imaging",
+        "keywords": [
+          "medical",
+          "mri",
+          "x ray",
+          "xray",
+          "cxr",
+          "radiology",
+          "ct",
+          "neuroimaging",
+          "tumor",
+          "tumour",
+          "tb",
+          "tuberculosis",
+          "clinical",
+          "disease",
+          "brain",
+          "healthcare"
+        ]
+      },
+      {
+        "name": "Remote Sensing",
+        "keywords": [
+          "remote sensing",
+          "satellite",
+          "sentinel",
+          "sentinel 2",
+          "landsat",
+          "crop",
+          "land cover",
+          "gis",
+          "geospatial",
+          "earth engine"
+        ]
+      },
+      {
+        "name": "Computer Vision",
+        "keywords": [
+          "computer vision",
+          "vision",
+          "image",
+          "images",
+          "segmentation",
+          "detection",
+          "cnn",
+          "unet",
+          "yolo",
+          "gan",
+          "point cloud",
+          "anomaly"
+        ]
+      }
+    ],
+    "default_category": "Machine Learning"
+  },
+  "projects": [
+    {
+      "name": "TableTalk_CodeGen",
+      "url": "https://github.com/BasharatWali/TableTalk_CodeGen",
+      "homepage": null,
+      "title": "TableTalk CodeGen",
+      "summary": "CodeLlama-7B-Instruct fine-tuned with QLoRA to answer natural-language questions about tables. Instead of answering directly, the model writes a single line of pandas code, which is then run against the table to produce the answer.",
+      "image": "https://raw.githubusercontent.com/BasharatWali/TableTalk_CodeGen/main/assets/train_loss_final.png",
+      "image_fit": "contain",
+      "image_bg": "#303030",
+      "category": "LLMs & NLP",
+      "highlight": "75.94 on DataBench, rank 13 on the SemEval-2025 Task 8 leaderboard",
+      "tags": [
+        "CodeLlama-7B",
+        "QLoRA",
+        "PEFT",
+        "TRL",
+        "pandas"
+      ],
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "created_at": "2025-03-11T09:00:30Z",
+      "pushed_at": "2026-10-31T13:28:02Z",
+      "featured": true,
+      "order": 1
+    },
+    {
+      "name": "Parkinson_Disease_Detection",
+      "url": "https://github.com/BasharatWali/Parkinson_Disease_Detection",
+      "homepage": null,
+      "title": "Parkinson's Disease Detection from MRI",
+      "summary": "Registers 3D T1-weighted brain MRI to the PD25 atlas, extracts radiomic features from subcortical structures, and separates Parkinson's patients from healthy controls with SVM feature selection and a Random Forest. Served through a small Flask app.",
+      "image": "https://raw.githubusercontent.com/BasharatWali/Parkinson_Disease_Detection/main/assets/registration_and_masking.png",
+      "image_fit": "contain",
+      "image_bg": "#000000",
+      "category": "Medical Imaging",
+      "highlight": "0.96 accuracy and 0.98 ROC AUC on 148 held-out scans",
+      "tags": [
+        "ANTsPy",
+        "PyRadiomics",
+        "scikit-learn",
+        "Flask"
+      ],
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "created_at": "2025-01-27T07:19:41Z",
+      "pushed_at": "2026-11-14T16:10:23Z",
+      "featured": true,
+      "order": 2
+    },
+    {
+      "name": "Time-Series-Based-Crop-Type-Mapping",
+      "url": "https://github.com/BasharatWali/Time-Series-Based-Crop-Type-Mapping",
+      "homepage": null,
+      "title": "Crop Type Mapping from Sentinel-2",
+      "summary": "Pixel-wise crop-type mapping of Ontario farmland from a six-month Sentinel-2 time series, using a U-Net that shares 2D convolutions across months and pools over time.",
+      "image": "https://raw.githubusercontent.com/BasharatWali/Time-Series-Based-Crop-Type-Mapping/main/assets/prediction_2021.png",
+      "image_fit": "cover",
+      "image_bg": null,
+      "category": "Remote Sensing",
+      "highlight": "Six-month Sentinel-2 series turned into a full 2021 crop map (GeoTIFF + Earth Engine)",
+      "tags": [
+        "TensorFlow",
+        "U-Net",
+        "Sentinel Hub",
+        "rasterio",
+        "Earth Engine"
+      ],
+      "language": "Jupyter Notebook",
+      "stars": 1,
+      "created_at": "2025-01-29T11:10:50Z",
+      "pushed_at": "2026-10-28T09:57:50Z",
+      "featured": true,
+      "order": 3
+    },
+    {
+      "name": "Underwater-Image-Enhancement",
+      "url": "https://github.com/BasharatWali/Underwater-Image-Enhancement",
+      "homepage": null,
+      "title": "Underwater Image Enhancement",
+      "summary": "A classical, non-learning image-processing pipeline for enhancing underwater photographs. The project reproduces the DIRS-CLAHS method (Ghani & Isa, 2015) as a baseline and extends it with Colour Attenuation Compensation, adaptive CLAHE and Multi-Scale…",
+      "image": "https://raw.githubusercontent.com/BasharatWali/Underwater-Image-Enhancement/main/assets/improved_pipeline_example.png",
+      "image_fit": "contain",
+      "image_bg": "#ffffff",
+      "category": "Computer Vision",
+      "highlight": "DIRS-CLAHS reproduced and extended, scored on UIEB with PSNR, SSIM, UIQM and UCIQE",
+      "tags": [
+        "OpenCV",
+        "scikit-image",
+        "CLAHE",
+        "MSRCR"
+      ],
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "created_at": "2025-03-06T07:27:33Z",
+      "pushed_at": "2026-10-31T19:13:51Z",
+      "featured": true,
+      "order": 4
+    },
+    {
+      "name": "Medicine_Rec_System",
+      "url": "https://github.com/BasharatWali/Medicine_Rec_System",
+      "homepage": null,
+      "title": "Drug Recommendation with Biomedical BERT",
+      "summary": "A retrieval-based medicine recommendation system. Drug and disease descriptions are embedded with PubMedBERT and ClinicalBERT, and a disease or symptom query is matched to the closest medications with Locality-Sensitive Hashing (LSH), SimHash and FAISS.",
+      "image": "https://raw.githubusercontent.com/BasharatWali/Medicine_Rec_System/main/assets/query_recommendation_example.png",
+      "image_fit": "cover",
+      "image_bg": null,
+      "category": "LLMs & NLP",
+      "highlight": "LSH, SimHash and FAISS compared on speed and match quality",
+      "tags": [
+        "PubMedBERT",
+        "ClinicalBERT",
+        "FAISS",
+        "LSH"
+      ],
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "created_at": "2025-01-29T11:30:23Z",
+      "pushed_at": "2026-10-31T19:00:38Z",
+      "featured": true,
+      "order": 5
+    },
+    {
+      "name": "Multi-Purpose-MLP-Classification-Regression",
+      "url": "https://github.com/BasharatWali/Multi-Purpose-MLP-Classification-Regression",
+      "homepage": null,
+      "title": "Multi-Task MLP: Age, Gender and Ethnicity",
+      "summary": "A single PyTorch multilayer perceptron that predicts gender (binary classification), ethnicity (5-class classification) and age (regression) from 48 × 48 grayscale face images at the same time.",
+      "image": "https://raw.githubusercontent.com/BasharatWali/Multi-Purpose-MLP-Classification-Regression/main/assets/confusion_matrix_gender.png",
+      "image_fit": "contain",
+      "image_bg": "#ffffff",
+      "category": "Deep Learning",
+      "highlight": "One network, three heads; about 75% gender accuracy on the test set",
+      "tags": [
+        "PyTorch",
+        "Multi-task learning"
+      ],
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "created_at": "2026-10-31T14:16:53Z",
+      "pushed_at": "2026-10-31T14:33:19Z",
+      "featured": true,
+      "order": 6
+    }
+  ]
+}
